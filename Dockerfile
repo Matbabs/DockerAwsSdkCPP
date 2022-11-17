@@ -13,7 +13,7 @@ RUN git pull origin main
 RUN git submodule update --init --recursive
 RUN mkdir build
 WORKDIR build
-RUN cmake .. -DBUILD_ONLY="s3" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/install
+RUN cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/install
 RUN make
 RUN make install
 WORKDIR /
